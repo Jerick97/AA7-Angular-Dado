@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadoComponent implements OnInit {
   numero : number = 1;
-  puntos : string = "*".repeat(this.numero)
+  aleatorio : number = 0;
+  puntos : string = "";
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  generarAleatorio(){
+    this.aleatorio = Math.ceil(Math.random() * 6);
+    this.numero = this.aleatorio;
+    this.puntos = "*".repeat(this.numero);
+  }
 }
