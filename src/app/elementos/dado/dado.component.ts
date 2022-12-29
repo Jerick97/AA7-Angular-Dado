@@ -9,11 +9,11 @@ export class DadoComponent implements OnInit {
   numero : number = 1;
   aleatorio : number = 0;
   puntos : string = "";
+  anterior !: number;
   constructor() { }
 
   ngOnInit(): void {
   }
-
   generarAleatorio(){
     this.aleatorio = Math.ceil(Math.random() * 6);
     this.numero = this.aleatorio;
